@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Skranji&display=swap');
+
+*, *::before, *::after {
+    margin: 0px;
+    padding: 0px; 
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: Nunito, sans-serif;
+}
+
+main > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Element indexing */
+.sky {
+    z-index: 0;
+}
+
+.foreground {
+    z-index: 1;
+}
+
+.cliff-right,
+.cliff-left {
+    z-index: 5;
+}
+
+.fog-water,
+.fog-mtn {
+    z-index: 4;
+}
+
+.mtn-big{
+    z-index: 3;
+}
+
+.mtn-small {
+    z-index: 2;
+}
+
+/* Header */
+header {
+    width: 100%;
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: .5rem;
+    border-bottom: 2px solid rgba(255,255,255,0.7);
+    background: transparent;
+}
+
+header nav{
+    color: white;
+    max-width: 1860px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75rem;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+header ul li{
+    padding: 0 1.5rem;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.hamburger {
+    background-color: rgba(100,100,100,0.6);
+    display: flex;
+    padding: .5rem;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
