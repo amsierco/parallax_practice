@@ -24,6 +24,7 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: .3s cubic-bezier(.2,.49,.32,.99);
 }
 
 /* Element indexing */
@@ -40,20 +41,20 @@ main {
 }
 
 .cliff-right{
-    z-index: 5;
+    z-index: 6;
     left: 55%;
 }
 
 .cliff-left {
-    z-index: 5;
+    z-index: 6;
     left: 45%;
 }
 
 .fog-water{
-    z-index: 4;
+    z-index: 5;
 }
 .fog-mtn {
-    z-index: 4;
+    z-index: 5;
 }
 
 .mtn-big{
@@ -62,6 +63,24 @@ main {
 
 .mtn-small {
     z-index: 2;
+}
+
+.title {
+    z-index: 6;
+    pointer-events: auto;
+    color: rgba(255,255,255,.9);
+    font-size: 3.5rem;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h2,
+.title h3{
+    letter-spacing: .4rem;
+    line-height: 1.1;
 }
 
 /* Header */
