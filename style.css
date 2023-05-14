@@ -7,15 +7,23 @@
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
     font-family: Nunito, sans-serif;
 }
 
-main > img {
+main {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.parallax {
+    pointer-events: none;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Element indexing */
@@ -24,15 +32,26 @@ main > img {
 }
 
 .foreground {
+    position: absolute;
     z-index: 1;
+    top: 50%;
+    left: 46%;
+    transform: translate(-50%, -50%);
 }
 
-.cliff-right,
+.cliff-right{
+    z-index: 5;
+    left: 55%;
+}
+
 .cliff-left {
     z-index: 5;
+    left: 45%;
 }
 
-.fog-water,
+.fog-water{
+    z-index: 4;
+}
 .fog-mtn {
     z-index: 4;
 }
@@ -82,7 +101,7 @@ header ul li a {
     color: white;
 }
 
-.hamburger {
+header .hamburger {
     background-color: rgba(100,100,100,0.6);
     display: flex;
     padding: .5rem;
